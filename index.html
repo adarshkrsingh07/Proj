@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Attaching CSS file -->
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <section class="container">
+        <header><b>Registration Form</b></header>
+        <form action="welcome.html" class="form">
+
+            <div class="input-box">
+                <label><b>First Name</b></label>
+                <input type="text" id="first-name" placeholder="Enter First Name" required>
+                <div class="error" id="first-name-error"></div>
+            </div>
+
+            <div class="input-box">
+                <label><b>Last Name</b></label>
+                <input type="text" id="last-name" placeholder="Enter Last Name" required>
+                <div class="error" id="last-name-error"></div>
+            </div>
+
+            <div class="input-box">
+                <label><b>Email Address</b></label>
+                <input type="email" id="email-address" placeholder="Enter Email Address" required>
+                <div class="error" id="email-address-error"></div>
+            </div>
+
+                <div class="input-box">
+                <label><b>Password</b></label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter password" required>
+                    <div class="error" id="password-error"></div>
+                    <i class="fa fa-eye" id="togglePassword"></i>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="input-box">
+                    <label><b>Phone Number</b></label>
+                    <div class="phone-container">
+                        <select id="country-code" name="country-code" required>
+                            <option value="" hidden>Select</option>
+                            <option value="+1">None</option>
+                            <option value="+93">+93 (Afganistan)</option>
+                            <option value="+1">+1 (USA)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+91">+91 (India)</option>
+                            <option value="+92">+92 (Pakistan)</option>
+                            <option value="+86">+86 (China)</option>
+                            <option value="+880">+880 (Bangladesh)</option>
+                            <option value="+997">+997 (Nepal)</option>
+                            <option value="+94">+94 (Srilanka)</option>
+                            <!-- Add more country codes as needed -->
+                        </select>
+                        <input type="tel" id="phone-number" placeholder="Enter Phone Number" required>
+                    </div>
+                    <div class="error" id="phone-number-error"></div>
+                </div>
+
+                <div class="input-box">
+                    <label><b>Birth Date</b></label>
+                    <input type="date" id="birth-date" required>
+                    <div class="error" id="birth-date-error"></div>
+                </div>
+            </div>
+
+            <div class="gender-box">
+                <h3><b>Gender</b></h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" checked>
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender">
+                        <label for="check-female">Female</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-other" name="gender">
+                        <label for="check-other">Prefer not to say</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-box address">
+                <label><b>Address</b></label>
+                <div class="column">
+                    <div class="select-box">
+                        <select id="country">
+                            <option hidden>Choose a Country</option>
+                            <option>America</option>
+                            <option>Barbados</option>
+                            <option>China</option>
+                            <option>Denmark</option>
+                            <option>Europe</option>
+                            <option>France</option>
+                            <option>Germany</option>
+                            <option>Hungary</option>
+                            <option>India</option>
+                        </select>
+                    </div>
+                    <input type="text" id="city" placeholder="Enter your city" required>
+                    <div class="error" id="city-error"></div>
+                </div>
+                <input type="text" id="street-address" placeholder="Enter street address" required>
+
+                <input type="text" id="postal-code" placeholder="Enter your postal code" required>
+                <div class="error" id="postal-code-error"></div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+    <script src="script.js"></script> <!-- Attaching JavaScript file -->
+</body>
+</html>
